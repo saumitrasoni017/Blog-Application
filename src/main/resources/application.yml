@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: blog-application-api
+
+# DATASOURCE CONFIGURATION
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog_applicationDB?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
