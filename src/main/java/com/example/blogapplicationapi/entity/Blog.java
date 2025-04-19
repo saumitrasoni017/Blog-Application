@@ -15,6 +15,7 @@ public class Blog {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String blogId;
     private String title;
+    private String content;
     private LocalDate createdAt;
     private LocalDate updatedAt;
     private BlogStatus blogStatus;
