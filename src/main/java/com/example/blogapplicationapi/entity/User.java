@@ -1,5 +1,6 @@
 package com.example.blogapplicationapi.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,6 +25,7 @@ public class User {
     @CreatedDate
     private LocalDate userRegisteredDate;
 
-    @OneToMany
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
     private List<Blog> blogs = new ArrayList<>();
 }
